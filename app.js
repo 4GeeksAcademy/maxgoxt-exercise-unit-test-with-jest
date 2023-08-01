@@ -22,15 +22,15 @@ function deEuroAPound(valorEnEuro) {
     return valorEnPound;
 }
 
-// quiero de dolares a yenes
-// De dolares a euros luego de euros a yenes
+// Quiero de dolares a yenes?
+// Hago de dolares a euros luego de euros a yenes
 function fromDollarToYen(valorEnDolar) {
     let valorEnYen = deEuroAYen(valorEnDolar / 1.2);
     return valorEnYen;
 }
 
-// quiero de Yenes a Pounds
-// De Yenes a euros luego de euros a Pound
+// Quiero de Yenes a Pounds?
+// Hago de Yenes a euros luego de euros a Pound
 //                 USANDO oneEuroIs ////
 function fromYenToPound(valorEnYenes) {
     let valorEnPound = valorEnYenes / 127.9 * oneEuroIs.GBP;
