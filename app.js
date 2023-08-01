@@ -1,3 +1,9 @@
+let oneEuroIs = {
+    "JPY": 127.9, // japan yen
+    "USD": 1.2, // us dollar
+    "GBP": 0.8, // british pound
+}
+
 // declaramos una funcion con el mismo nombre "formEuroToDollar"
 const fromEuroToDollar = function(valueInEuro){
     // convertimos el valor a dolares
@@ -25,12 +31,13 @@ function fromDollarToYen(valorEnDolar) {
 
 // quiero de Yenes a Pounds
 // De Yenes a euros luego de euros a Pound
+//                 USANDO oneEuroIs ////
 function fromYenToPound(valorEnYenes) {
-    let valorEnPound = deEuroAPound(valorEnYenes / 127.9);
+    let valorEnPound = valorEnYenes / 127.9 * oneEuroIs.GBP;
     return valorEnPound;
 }
 
 module.exports = {fromEuroToDollar, fromDollarToYen, fromYenToPound }
 
 console.log(fromDollarToYen(1));
-console.log(fromYenToPound(1));
+console.log(fromYenToPound(12));
